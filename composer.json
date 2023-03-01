@@ -1,5 +1,5 @@
 {
-  "name": "jeely/jeelyPlus",
+  "name": "larabot/jeelyplus",
   "description": "A personal module for developing the Telegram bot in PHP",
   "minimum-stability": "stable",
   "require": {
