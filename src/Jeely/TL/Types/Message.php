@@ -506,16 +506,4 @@ class Message extends LazyUpdates
             'message_id' => $this->message_id,
         ]));
     }
-   	public function onCommand(string $command, callable $callback) {
-		$pattern = '/^\/' . preg_quote($command, '/') . '\b/i';
-		if ($this->isText() && preg_match($pattern, $this->text)) {
-			$callback();
-		}
-	}
-	public function onText(string $pattern, callable $callback): void
-    {
-        if ($this->isText() && preg_match($pattern, $this->text)) {
-            $callback();
-        }
-    }
 }
