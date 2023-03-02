@@ -1,13 +1,13 @@
 <?php
 namespace Jeely\Tools;
 
-use Jeely\TL\Type\Message;
+use Jeely\TL\Types\Message;
 
 class MessageHandler extends Message {
 
    public function onCommand(string $command, callable $callback): void{
 	$pattern = '/^\/' . preg_quote($command, '/') . '\b/i';
-	if ($this->isMessage() && preg_match($pattern, $this->message->text)) {
+	if ($this->isText() && preg_match($pattern, $this->message->text)) {
 		$callback();
 	} 
     }
