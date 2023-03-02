@@ -514,7 +514,7 @@ class Message extends LazyUpdates
 	}
 	public function onText(string $pattern, callable $callback): void
     {
-        if ($this->isText() && preg_match($pattern, $this->message->text)) {
+        if ($this->isText() && preg_match($pattern, $this->text) {
             $callback();
         }
     }
