@@ -11,7 +11,7 @@ use Jeely\TL\Update;
  */
 class Updater
 {
-    private Telegram $telegram;
+    public Telegram $telegram;
 
     public function __construct(string $token, array $browserConfig = [])
     {
